@@ -29,7 +29,6 @@ metadata:
     {{- if $ingress.customHeadersConfigMap }}
     nginx.ingress.kubernetes.io/custom-headers: {{ .Release.Namespace }}/custom-headers-configmap
     {{- end }}
-    nginx.ingress.kubernetes.io/connection-proxy-header: "keep-alive"
     nginx.ingress.kubernetes.io/enable-cors: "true"
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
@@ -80,3 +79,4 @@ spec:
               port:
                 name: "http"
 {{- end }}
+
